@@ -1,14 +1,4 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<style>
-  :host {
+:host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
     color: #333;
@@ -292,39 +282,3 @@
       visibility: hidden;
     }
   }
-</style>
-
-<!-- Toolbar -->
-<my-component [userIsLoggedIn]="userIsLoggedIn" (logOut)="logOutUser()">
-  <p>Ng Content</p>
-</my-component>
-
-
-  <!-- Highlight Card -->
-  <div id="my-element" #myElement>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis optio magnam assumenda adipisci eius illo amet! Repudiandae et facilis nobis incidunt deleniti explicabo nesciunt. Aliquid expedita dignissimos iure reiciendis pariatur.</p>
-  </div>
-
-  <button id="my-button" *ngIf="!userIsLoggedIn" (click)="logIn()">Log In</button>
-
-  <!-- <div *ngFor="let dog of dogs; let i = index">
-    {{ dog.name }}: {{ dog.breed }} <button (click)="deleteElement(i)">Delete</button>
-  </div>
-
-  <button id="my-button" [disabled]="buttonDisabled">A button</button>
-
-  <button id="my-button" (click)="changeButtonState()">My other button</button>
-
-  <input [(ngModel)]="title"> -->
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-
-<router-outlet></router-outlet>
