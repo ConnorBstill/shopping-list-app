@@ -9,10 +9,11 @@ export class MyComponentComponent implements OnInit {
   @Input() userIsLoggedIn: boolean;
 
   @Output() logOut = new EventEmitter<void>();
+  
 
   constructor() {
     console.log('my-component constructor')
-   }
+  }
 
   ngOnInit(): void {
     console.log('my-component ngOnInit')
@@ -21,5 +22,4 @@ export class MyComponentComponent implements OnInit {
   logOutEvent(): void {
     this.logOut.emit()
   }
-
 }

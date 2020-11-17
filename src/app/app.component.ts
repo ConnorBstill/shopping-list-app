@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { CarsService } from './cars.service';
 
 @Component({
   selector: 'app-root',
@@ -6,46 +7,23 @@ import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  userIsLoggedIn: boolean = false;
+  isLoggedIn: boolean = false;
 
   @ViewChild('myElement', { static: true }) myElement: ElementRef;
-  
-  // buttonDisabled: boolean = true;
-  // title = `bvtca-ng-demo-two ${this.buttonDisabled}`;
 
-  // dogs = [
-  //   {
-  //     name: 'Bandit',
-  //     breed: 'Border Collie'
-  //   },
-  //   {
-  //     name: 'Tascha',
-  //     breed: 'German Shepherd'
-  //   },
-  //   {
-  //     name: 'Echo',
-  //     breed: 'Australian Shepherd'
-  //   }
-  // ]
+  constructor(private carsService: CarsService) {
 
-  // changeButtonState(): void {
-  //   this.buttonDisabled = !this.buttonDisabled;
-  // }
-
-  // deleteElement(index: number): void {
-  //   this.dogs.splice(index, 1);
-  // }
-
-  ngOnInit(): void {
-    console.log(this.myElement);
   }
 
-  logIn(): void {
-    this.userIsLoggedIn = !this.userIsLoggedIn;
+  ngOnInit(): void {
+    console.log(this.carsService.getCars())
+  }
+
+  changeParagraphColor(): void {
   }
 
   logOutUser(): void {
     console.log('logOut event')
-    this.userIsLoggedIn = !this.userIsLoggedIn;
+    this.isLoggedIn = !this.isLoggedIn;
   }
 }
