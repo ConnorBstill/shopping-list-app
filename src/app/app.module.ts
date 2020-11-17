@@ -25,7 +25,7 @@ import { HeaderComponent } from './admin/header/header.component';
     AppRoutingModule,
     CommonModule,
     FormsModule,
-    MyComponentModule
+    MyComponentModule,
   ],
   providers: [CarsService],
   bootstrap: [AppComponent]

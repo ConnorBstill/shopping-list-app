@@ -1,5 +1,9 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
+import { Car } from '../interfaces/cars.interface';
+
+import { CarsService } from '../cars.service';
+
 @Component({
   selector: 'my-component',
   templateUrl: './my-component.component.html',
@@ -9,17 +13,23 @@ export class MyComponentComponent implements OnInit {
   @Input() userIsLoggedIn: boolean;
 
   @Output() logOut = new EventEmitter<void>();
+
+  public cars: Car[] = [];
   
 
-  constructor() {
+  constructor(private carsService: CarsService) {
     console.log('my-component constructor')
   }
 
   ngOnInit(): void {
-    console.log('my-component ngOnInit')
+    this.cars = this.carsService.getCars();
   }
 
   logOutEvent(): void {
     this.logOut.emit()
+  }
+
+  removeCar(index: number): void {
+    this.carsService.removeCar(index);
   }
 }

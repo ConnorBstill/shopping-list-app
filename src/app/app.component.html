@@ -295,19 +295,22 @@
 </style>
 
 <!-- Toolbar -->
-<my-component [userIsLoggedIn]="isLoggedIn" (logOut)="logOutUser()">
-  <p>Ng Content</p>
-</my-component>
+<my-component [userIsLoggedIn]="isLoggedIn" (logOut)="logOutUser()"></my-component>
 
-<app-example></app-example>
+<router-outlet></router-outlet>
 
+<div>
+  <p>Footer!</p>
+</div>
+<!-- <app-example></app-example> -->
 
-  <!-- Highlight Card -->
-  <div id="my-element" #myElement>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis optio magnam assumenda adipisci eius illo amet! Repudiandae et facilis nobis incidunt deleniti explicabo nesciunt. Aliquid expedita dignissimos iure reiciendis pariatur.</p>
-  </div>
+<!-- <div *ngFor="let car of cars; let i = index">
+  {{ car.make }}
+  {{ car.model }}
+  {{ car.year }}
 
-  <button id="my-button" (click)="changeParagraphColor()">Change paragraph color</button>
+  <button (click)="removeCar(i)">Remove car</button>
+</div> -->
 
   <!-- <div *ngFor="let dog of dogs; let i = index">
     {{ dog.name }}: {{ dog.breed }} <button (click)="deleteElement(i)">Delete</button>
@@ -327,6 +330,3 @@
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-
-
-<router-outlet></router-outlet>

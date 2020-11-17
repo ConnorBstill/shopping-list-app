@@ -1,4 +1,7 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+
+import { Car } from './interfaces/cars.interface';
+
 import { CarsService } from './cars.service';
 
 @Component({
@@ -11,15 +14,19 @@ export class AppComponent implements OnInit {
 
   @ViewChild('myElement', { static: true }) myElement: ElementRef;
 
+  public cars: Car[] = [];
+
   constructor(private carsService: CarsService) {
 
   }
 
   ngOnInit(): void {
-    console.log(this.carsService.getCars())
+    this.cars = this.carsService.getCars();
+    console.log(this.cars)
   }
 
-  changeParagraphColor(): void {
+  removeCar(index: number): void {
+    this.carsService.removeCar(index);
   }
 
   logOutUser(): void {

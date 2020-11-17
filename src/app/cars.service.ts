@@ -1,46 +1,41 @@
 import { Injectable } from '@angular/core';
 
-interface Car {
-  make: string;
-  model: string;
-  year: number;
-}
-
-const cars: Car[] = [
-  {
-    make: 'Honda',
-    model: 'Civic',
-    year: 2001
-  },
-  {
-    make: 'Toyota',
-    model: 'Highlander',
-    year: 2010
-  },
-  {
-    make: 'Ford',
-    model: 'pinto',
-    year: 1981
-  },
-  {
-    make: 'Subaru',
-    model: 'Outback',
-    year: 2017
-  }
-]
+import { Car } from './interfaces/cars.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarsService {
+  cars: Car[] = [
+    {
+      make: 'Honda',
+      model: 'Civic',
+      year: 2001
+    },
+    {
+      make: 'Toyota',
+      model: 'Highlander',
+      year: 2010
+    },
+    {
+      make: 'Ford',
+      model: 'pinto',
+      year: 1981
+    },
+    {
+      make: 'Subaru',
+      model: 'Outback',
+      year: 2017
+    }
+  ]
 
   constructor() { }
 
   getCars(): Car[] {
-    return cars;
+    return this.cars;
   }
 
   removeCar(index: number): void {
-    cars.splice(index, 1);
+    this.cars.splice(index, 1);
   }
 }
