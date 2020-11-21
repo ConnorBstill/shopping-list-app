@@ -12,13 +12,15 @@ import { AppComponent } from './app.component';
 import { MyComponentModule } from './my-component/my-component.module';
 import { ExampleComponent } from './example/example.component';
 import { HeaderComponent } from './admin/header/header.component';
+import { UnlessDirective } from './unless.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     // MyComponentComponent,
     ExampleComponent,
-    HeaderComponent
+    HeaderComponent,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,

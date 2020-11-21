@@ -14,6 +14,8 @@ export class MyComponentComponent implements OnInit {
 
   @Output() logOut = new EventEmitter<void>();
 
+  public year: number = 2020;
+
   public cars: Car[] = [];
   
 

@@ -15,11 +15,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(param => {
-      console.log(param['year'])
+      console.log(param)
     });
   }
 
   navigateToExamplePage(): void {
-    this.router.navigate(['/example'])
+    this.router.navigate(['/example'], { queryParams: { year: '2020' } })
   }
 }
